@@ -1,6 +1,6 @@
 # GAI Calculator
 
-This is a Python script for calculating General Aging Index (GAI) based on OTU (Operational Taxonomic Units) data and demographic information.
+This is a Python script for calculating Gut Aging Index (GAI) based on OTU (Operational Taxonomic Units) data.
 
 ## Prerequisites
 
