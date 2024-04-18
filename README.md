@@ -2,6 +2,8 @@
 
 This is a Python script for calculating Gut Aging Index (GAI) based on OTU (Operational Taxonomic Units) data.
 
+> The datasets used in paper can be downloaded with `download_data.sh` BASH script.
+
 ## Prerequisites
 
 - Python 3.x
