@@ -8,7 +8,7 @@ This is a Python script for calculating Gut Aging Index (GAI) based on OTU (Oper
 
 - Python 3.x
 - pandas
-- pycaret
+- pycaret 2.3.5
 
 ## Installation
 
@@ -22,7 +22,7 @@ git clone https://github.com/zwbao/GAI_paper.git
 
 ```
 pip install pandas
-pip install pycaret
+pip install pycaret==2.3.5
 ```
 
 ## Usage
@@ -43,6 +43,27 @@ python gai_cal.py meta.tsv otu.tsv
    - `final_best_model_<date>.pkl`: A file containing the finalized best model, where `<date>` represents the current date in the format `YYYYMMDD`.
    - `adjust_values.tsv`: A file containing average raw GAI values for different age ranges.
    - `result.tsv`: A file containing the final results, including age, raw GAI, adjusted value, and corrected GAI.
+
+## Using Pre-trained Models
+
+To use the pre-trained models from the 'models' folder, follow these steps:
+
+1. Load a model using PyCaret:
+
+   ```python
+   from pycaret.classification import load_model
+   model = load_model('path/to/model')
+   ```
+
+2. Prepare your data as specified in the `meta.tsv` and `otu.tsv` files, ensuring it matches the format the model expects.
+
+3. Predict GAI using the loaded model:
+
+   ```python
+   predictions = predict_model(model, data=unseen_data)
+   ```
+
+This allows for quick application of our research findings and replication of results using established models.
 
 ## Contact
 
